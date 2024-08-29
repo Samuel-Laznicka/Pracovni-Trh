@@ -17,7 +17,7 @@ Databáze typ: SQLITE
 
 1. Naklonujte uložiště/repository:
     ```
-        git clone https://github.com/Samuel-Laznicka/Pracovni_Trh.git
+        git clone https://github.com/Samuel-Laznicka/Pracovni-Trh.git
         cd pracovni-trh
     ```
 
@@ -25,7 +25,6 @@ Databáze typ: SQLITE
     ```
         composer install
         npm install
-        npm run dev
     ```
 
 3. Zkopírujte soubor `.env.example` do souboru `.env` a nakonfigurujte prostředí:
@@ -48,14 +47,14 @@ Databáze typ: SQLITE
         php artisan db:seed --class=DatabaseSeeder
     ```
 
-7. Naservírujte aplikaci:
+7. Spusťte vývojový server:
     ```
-        php artisan serve
+        npm run dev
     ```
 
 ## Použití
 
-Po naservírování aplikace k ní můžete přistupovat ve webovém prohlížeči na adrese ``.
+Po naservírování aplikace k ní můžete přistupovat ve webovém prohlížeči na adrese `http://pracovni-trh.test/`.
 
 
 
@@ -79,7 +78,7 @@ Database type: SQLITE
 
 1. Clone the repository:
     ```
-        git clone https://github.com/Samuel-Laznicka/Pracovni_Trh.git
+        git clone https://github.com/Samuel-Laznicka/Pracovni-Trh.git
         cd pracovni-trh
     ```
 
@@ -87,7 +86,6 @@ Database type: SQLITE
     ```
         composer install
         npm install
-        npm run dev
     ```
 
 
@@ -111,11 +109,11 @@ Database type: SQLITE
         php artisan db:seed --class=DatabaseSeeder
     ```
 
-7. Serve the application:
+7. Start the development server:
     ```
-        php artisan serve
+        npm run dev
     ```
 
 ## Usage
 
-After serving the application, you can access it in your web browser at ``.
+After serving the application, you can access it in your web browser at `http://pracovni-trh.test/`.
