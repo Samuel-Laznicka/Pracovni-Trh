@@ -37,7 +37,7 @@ Databáze typ: SQLITE
         php artisan key:generate
     ```
 
-5. Spusťte migraci:
+5. Spusťte migraci a vytvořte SQLite databázi:
     ```
         php artisan migrate
     ```
@@ -99,7 +99,7 @@ Database type: SQLITE
         php artisan key:generate
     ```
 
-5. Run the migrations:
+5. Run the migrations and create a SQLite database:
     ```
         php artisan migrate
     ```
