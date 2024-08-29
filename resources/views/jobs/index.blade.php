@@ -25,7 +25,7 @@
         <section class="pt-10">
             <x-section-heading>Nedávno přidané pozice</x-section-heading>
 
-            @if($featured>isEmpty)
+            @if($featured>isEmpty())
                 <h3 class="font-bold text-xl text-center">Žádné dostupné pozice!</h3>
             @else
                 <div class="grid lg:grid-cols-3 gap-8 mt-6">
@@ -39,7 +39,7 @@
         <section>
             <x-section-heading>Označení</x-section-heading>
 
-            @if($tags->isEmpty)
+            @if($tags->isEmpty())
                 <h3 class="font-bold text-xl text-center">Žádná uvedená označení!</h3>
             @else
                 <div class="grid:gap-5 space-y-6">
@@ -53,7 +53,7 @@
         <section>
             <x-section-heading>Dostupné pozice</x-section-heading>
 
-            @if($jobs->isEmpty)
+            @if($jobs->isEmpty())
                 <h3 class="font-bold text-xl text-center">Žádné dostupné pozice!</h3>
             @else
                 <div class="mt-6 space-y-6">
