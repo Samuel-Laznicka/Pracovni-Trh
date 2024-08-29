@@ -14,13 +14,13 @@ use Illuminate\Validation\Rule;
 class JobController extends Controller
 {
 
-    public function index(Job $jobs)
+    public function index()
     {
         $jobs = Job::latest()->with(['employer', 'tags'])->get()->groupBy('featured');
 
         return view('jobs.index', [
-            'jobs' => $jobs[0],
-            'featured' => $jobs[1], 
+            'jobs' => $jobs[0] ?? collect(),
+            'featured' => $jobs[1] ?? collect(),
             'tags' => Tag::all(),
         ]);
     }
