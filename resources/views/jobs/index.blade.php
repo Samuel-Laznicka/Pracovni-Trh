@@ -25,31 +25,43 @@
         <section class="pt-10">
             <x-section-heading>Nedávno přidané pozice</x-section-heading>
 
-            <div class="grid lg:grid-cols-3 gap-8 mt-6">
-                @foreach($featured->take(12) as $job)
-                    <x-job-card :$job />
-                @endforeach
-            </div>
+            @if($featured>isEmpty)
+                <h3 class="font-bold text-xl text-center">Žádné dostupné pozice!</h3>
+            @else
+                <div class="grid lg:grid-cols-3 gap-8 mt-6">
+                    @foreach($featured->take(12) as $job)
+                        <x-job-card :$job />
+                    @endforeach
+                </div>
+            @endif
         </section>
 
         <section>
             <x-section-heading>Označení</x-section-heading>
 
-            <div class="grid:gap-5 space-y-6">
-                @foreach($tags->take(8) as $tag)
-                    <x-tag :$tag />
-                @endforeach
-            </div>
+            @if($tags->isEmpty)
+                <h3 class="font-bold text-xl text-center">Žádná uvedená označení!</h3>
+            @else
+                <div class="grid:gap-5 space-y-6">
+                    @foreach($tags->take(8) as $tag)
+                        <x-tag :$tag />
+                    @endforeach
+                </div>
+            @endif
         </section>
 
         <section>
             <x-section-heading>Dostupné pozice</x-section-heading>
 
-            <div class="mt-6 space-y-6">
-                @foreach($jobs->take(10) as $job)
-                    <x-job-card-wide :$job />
-                @endforeach
-            </div>
+            @if($jobs->isEmpty)
+                <h3 class="font-bold text-xl text-center">Žádné dostupné pozice!</h3>
+            @else
+                <div class="mt-6 space-y-6">
+                    @foreach($jobs->take(10) as $job)
+                        <x-job-card-wide :$job />
+                    @endforeach
+                </div>
+            @endif
         </section>
 
     </div>
