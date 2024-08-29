@@ -25,7 +25,7 @@
         <section class="pt-10">
             <x-section-heading>Nedávno přidané pozice</x-section-heading>
 
-            @if($featured>isEmpty())
+            @if($featured->isEmpty())
                 <h3 class="font-bold text-xl text-center">Žádné dostupné pozice!</h3>
             @else
                 <div class="grid lg:grid-cols-3 gap-8 mt-6">
